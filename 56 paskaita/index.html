@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>56</title>
+</head>
+
+<body>
+  <form action="/testf" method="post">
+    <!-- <form> -->
+    <table>
+      <h1>Payment form</h1>
+      <p>Required fields are followed by <abbr title="Required text">*</abbr></p>
+      <h2>Contact information</h2>
+      <fieldset style="width: 200px">
+        <legend>Title</legend>
+        <div>
+          <input type="radio" id="Mister" name="sex" value="Mister" />
+          <label for="Mister">Mister</label><br />
+        </div>
+
+        <div>
+          <input type="radio" id="Miss" name="sex" value="Miss" />
+          <label for="Miss">Miss</label><br />
+        </div>
+      </fieldset><br />
+
+      <div>
+        <label for="Name">Name:</label>
+        <abbr title="Required field">*</abbr>
+        <input type="text" id="Name" name="Name" required /><br /><br />
+      </div>
+
+      <div>
+        <label for="E-mail">E-mail:</label>
+        <abbr title="Required field">*</abbr>
+        <input type="email" id="E-mail" name="E-mail" required /><br /><br />
+      </div>
+
+      <div>
+        <label for="Password">Password:</label>
+        <abbr title="Required field">*</abbr>
+        <input type="password" id="password" name="password" required /><br /><br />
+      </div>
+
+      <div>
+        <h2>Payment information</h2>
+        <label for="Payment">Card type:</label>
+        <select id="Payment">
+          <option value="Visa">Visa</option>
+          <option value="Master card">Master card</option>
+          <option value="Maestro">Maestro</option>
+          <option value="PayPal">PayPal</option>
+        </select><br /><br />
+      </div>
+      <!-- https://stackoverflow.com/questions/48534229/what-is-the-correct-input-type-for-credit-card-numbers -->
+      <div>
+        <label for="ccn">Card Number:</label>
+        <abbr title="Required field">*</abbr>
+        <input id="ccn" type="tel" inputmode="numeric" pattern="[0-9\s]{13,19}" autocomplete="cc-number" maxlength="19"
+          placeholder="xxxx xxxx xxxx xxxx" required><br /><br />
+      </div>
+
+      <div>
+        <label for="Expiration - date">Expiration - date:</label>
+        <abbr title="Required field">*</abbr>
+        <input type="date" id="Expiration - date" name="Expiration - date" required /><br />
+        <p><i>formatted as mm/dd/yy</i></p>
+      </div>
+
+      <div class="button">
+        <button type="submit">Validate the payment</button>
+      </div>
+  </form>
+  </table>
+</body>
+
+</html>
